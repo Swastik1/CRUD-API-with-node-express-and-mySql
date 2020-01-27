@@ -18,7 +18,7 @@ exports.create = (req, res) => {
     });
   
     // Save Customer in the database
-    Customer.create(customer, (err, data) => {
+    Customer.save(customer, (err, data) => {
       if (err)
         res.status(500).send({
           message:
